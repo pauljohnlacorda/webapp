@@ -1,0 +1,95 @@
+.contact{
+    width: 25em;
+    height: 85vh;
+    
+    margin-left: 13% !important;
+    box-shadow: 5px 5px 12px rgba(0,0,0, .2);
+    border-radius: 0px solid black !important;    
+    /* border:1px solid black; */
+}
+.card-contact{
+    height: 100% !important;
+    /* border:0px solid rgb(255, 0, 115) !important; */
+    position: relative;
+    top: -7px;
+} 
+.header{
+    height: 80%;
+    width: 100%;
+    /* border: 1px solid rgb(25, 184, 73); */
+}
+.header img{
+    height: 100%;
+    /* margin-bottom: 10%; */
+    border-radius: 5px !important;
+    width: 100%;
+}
+.card-contact .gekajb{
+    margin-top: 6%;
+ 
+}
+
+
+.header .gekajb button{
+    font-size: 2em !important;
+    color: #bd6513;
+    height: 0px !important;
+    border: #bd6513;
+    
+   
+}
+.rec-arrow-left{
+    position: absolute;
+    left: 5%;
+    z-index: 1000;
+
+    
+    
+}
+.rec-arrow-right{
+    position: absolute;
+    right: 5%;
+    z-index: 1000;
+    
+}
+.estLZs button{
+    box-shadow: 0 0 0px 0px #bd6513;
+    background-color: rgb(248, 204, 204,);
+    position: relative;
+    top: -10em;
+    left: -40em;
+    z-index: 1;
+  
+}
+
+
+h6{
+    color: #bd6513
+}
+
+
+
+.d-flex{
+    border-top: 1px solid rgb(0,0,0,.2) ;
+    /* border-radius: 5px; */
+    
+}
+
+@media only screen and (max-width: 960px) {
+    .contact{
+        margin-left: 5% !important;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .contact{
+        margin-left: 5% !important;
+        margin-top: 1em !important;
+        height: 70% !important;
+    }
+    h6{
+        font-size: small !important;
+    }
+    
+}

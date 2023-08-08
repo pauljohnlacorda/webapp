@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import Carousel from 'react-elastic-carousel';
+// import Carousel from 'react-elastic-carousel';
 
 const Contacts = () => {
     return (
@@ -14,11 +14,11 @@ const Contacts = () => {
            <div className="card card-contact p-0 m-0">
            
              <div className="card-header header p-0 m-0 ">
-              <Carousel>
+              {/* <Carousel>
                   <img src="/contact/branchOne.jpg" className="img-fluid p-0 m-0"></img>
                   <img src="/contact/branchOne-One.jpg" className="img-fluid p-0 m-0"></img>
                   <img src="/contact/branchOne.png" className="img-fluid p-0 m-0"></img>
-               </Carousel> 
+               </Carousel>  */}
              </div>
            
                 <div className="container-fluid d-flex text-center"><h6>Chic Station 1</h6></div>
@@ -35,11 +35,11 @@ const Contacts = () => {
          <div className="card card-contact p-0 m-0">
          
            <div className="card-header header p-0 m-0 ">
-            <Carousel>
+            {/* <Carousel>
                 <img src="/contact/branchTwo.jpg" className="img-fluid p-0 m-0"></img>
                 <img src="/contact/branchTwo-Two.jpg" className="img-fluid p-0 m-0"></img>
                 <img src="/contact/branchTwo-Three.jpg" className="img-fluid p-0 m-0"></img>
-             </Carousel> 
+             </Carousel>  */}
            </div>
          
               <div className="container-fluid d-flex text-center"><h6>Chic Station 2</h6></div>

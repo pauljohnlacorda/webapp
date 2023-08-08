@@ -1,7 +1,8 @@
 import React from "react";
-import Carousel from 'react-elastic-carousel';
+// import Carousel from 'react-elastic-carousel';
 import "./Homepage.css";
 import { Link } from 'react-router-dom';
+import MyCarousel from "../carousel";
 
 const Homepage = () => {
     return (
@@ -26,29 +27,7 @@ const Homepage = () => {
           <section>
             <div className = "Homepage container-fluid my-5 p-0">
           
-                <Carousel>
-                    
-                  
-                    <div className="card container-fluid p-0 mt-4">
-                       <img className="image img-fluid slide" src="/carouselPic/slider-first.png" ></img>
-                       <h2 className="p-2">Treat yourself and unwind with us</h2>
-                    </div>    
-                   
-                    <div className="card container-fluid p-0 mt-4">
-                       <img className="image img-fluid slide" src="/carouselPic/slide-three.jpg" ></img>
-                       <h2 className="p-2"> Experience the ultimate relaxation</h2>
-                    </div>    
-                    <div className="card container-fluid p-0 mt-4">
-                       <img className="image img-fluid slide" src="/carouselPic/slide-six.png" ></img>
-                       <h2 className="p-2">Quality and standard equipment</h2>
-                    </div> 
-                    <div className="card container-fluid p-0 mt-4">
-                       <img className="image img-fluid slide" src="/carouselPic/slider-staff.png" ></img>
-                       <h2 className="p-2">"Highly trained and professional staff"</h2>
-                    </div>       
-                    
-                </Carousel>
-                
+            <MyCarousel />
             </div>
             </section>
 

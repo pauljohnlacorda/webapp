@@ -1,0 +1,23 @@
+.carousel-inner img{
+    width: 100vw;
+    height: 90vh;
+}
+.carousel-iten{
+    transition: transform 1s ease-in-out !important;
+    transition-duration: 1s !important;
+    transition-delay: 500ms !important;
+}
+.caption{
+    background-color: rgb(255,255,255,.7);
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 760px) {
+    .carousel-inner img{
+        width: 100vw;
+        height: 45vh;
+    }
+}

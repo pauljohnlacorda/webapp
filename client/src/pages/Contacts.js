@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
-// import Carousel from 'react-elastic-carousel';
+import CarouselContact1 from "../carouselChic1";
+import CarouselContact2 from "../carouselChic2";
 
 const Contacts = () => {
     return (
@@ -9,16 +10,12 @@ const Contacts = () => {
 
         <div className="row p-0 m-0">
      
-     <div className="col-md-6  p-0 m-2 contact bg-white">
+     <div className="col-md-6  p-0 mt-2 contact bg-white">
          
            <div className="card card-contact p-0 m-0">
            
              <div className="card-header header p-0 m-0 ">
-              {/* <Carousel>
-                  <img src="/contact/branchOne.jpg" className="img-fluid p-0 m-0"></img>
-                  <img src="/contact/branchOne-One.jpg" className="img-fluid p-0 m-0"></img>
-                  <img src="/contact/branchOne.png" className="img-fluid p-0 m-0"></img>
-               </Carousel>  */}
+              <CarouselContact1 />
              </div>
            
                 <div className="container-fluid d-flex text-center"><h6>Chic Station 1</h6></div>
@@ -30,16 +27,12 @@ const Contacts = () => {
           </div> 
          </div>
 
-         <div className="col-md-6  p-0 m-2 contact">
+         <div className="col-md-6  p-0 mt-2 contact">
          
          <div className="card card-contact p-0 m-0">
          
            <div className="card-header header p-0 m-0 ">
-            {/* <Carousel>
-                <img src="/contact/branchTwo.jpg" className="img-fluid p-0 m-0"></img>
-                <img src="/contact/branchTwo-Two.jpg" className="img-fluid p-0 m-0"></img>
-                <img src="/contact/branchTwo-Three.jpg" className="img-fluid p-0 m-0"></img>
-             </Carousel>  */}
+            <CarouselContact2 />
            </div>
          
               <div className="container-fluid d-flex text-center"><h6>Chic Station 2</h6></div>

@@ -59,7 +59,7 @@ const Homepage = () => {
                     <div className="card-hover p-0 m-0"><p className="bg-white fs-5 text-start p-2">Polygel nail extensions or softgel extensions are a nail enhancement that is more flexible and lightweight compared to acrylic but is harder than regular gel.</p></div>
                   </div> 
                   <div className="card-body p-0 m-0">
-                    <button type="button" class="btn btn-light m-2">View More</button>
+                    <button type="button" class="btn btn-light my-3">View More</button>
                   </div>
                 </div>
                 </Link>
@@ -73,7 +73,7 @@ const Homepage = () => {
                       <div className="card-hover p-0 m-0"><p className="bg-white fs-5 text-start p-2">Polygel nail extensions or softgel extensions are a nail enhancement that is more flexible and lightweight compared to acrylic but is harder than regular gel.</p></div>
                     </div>
                     <div className="card-body p-0 m-0">
-                      <button type="button" className="btn btn-light m-2">View More</button>
+                      <button type="button" className="btn btn-light my-3">View More</button>
                     </div>
                   </div>
               </Link>
@@ -92,7 +92,7 @@ const Homepage = () => {
                    
                 <div className="card-body p-0 m-0">
                  
-                  <button type="button" className="btn btn-light m-2">View More</button>
+                  <button type="button" className="btn btn-light my-3">View More</button>
                 </div>
                 </div>
               </Link>
@@ -107,7 +107,7 @@ const Homepage = () => {
                   </div>
                   <div className="card-body p-0 m-0">
                   
-                    <button type="button" className="btn btn-light m-2">View More</button>
+                    <button type="button" className="btn btn-light my-3">View More</button>
                   </div>
                 </div>
               </Link>

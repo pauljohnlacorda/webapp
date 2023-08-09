@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import "./Modal.css"
 
 
@@ -8,8 +8,10 @@ export default function Modal({open, children, onClose}){
     return(
         
         <div className="container-fluid p-0 m-0 mods">
-            <button onClick={onClose} className="btn_close">close</button>
+            
+            <button onClick={onClose} className="btn p-1 buttonModal"><i class="fa-solid fa-x "></i></button>
             {children}
+           
         </div>
       
     )

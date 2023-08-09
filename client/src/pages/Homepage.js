@@ -1,12 +1,68 @@
-import React from "react";
+import React, { useState , useRef} from "react";
 // import Carousel from 'react-elastic-carousel';
 import "./Homepage.css";
 import { Link } from 'react-router-dom';
 import MyCarousel from "../carousel";
+import Modal from '../Modal';
+// import React, { useRef } from 'react';
+import emailjs, { sendForm } from '@emailjs/browser';
 
 const Homepage = () => {
+  const [isOpen, setIsOpen] = useState(true)
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_dh6onn8', 'template_31zsqw8', form.current, 'NT3CQb3k1KTr_hyCJ')
+      .then((result) => {
+          console.log(result.text);
+          form.current.reset();
+          
+      }, (error) => {
+          console.log(error.text);
+      });
+      
+  };
+
+
     return (
         <>
+
+        <section className="sectionNewsletter">
+          <div className="newsletter">
+            
+            <Modal open ={isOpen} onClose={() => setIsOpen(false)}>
+            <div className="card card-newsletter p-0 mt-4">
+                  <div className="card-header text-center p-0 m-0 ">
+                    <img src="/carouselPic/news.png" alt="" className="img-fluid p-0 m-0 "></img>
+                  </div> 
+                  <div className="flex card-body p-0 m-1 ">
+                    <div className="flex p-0 m-0 card-body-newsletter">
+                      <h4 className="text-center">Subscribe to receive update and promos.</h4>
+                    </div>
+                 
+                  <div className="p-0 mt-2 text-center">
+                    <form className="formNewsletter" ref={form} onSubmit={sendEmail}>  
+                    <input 
+                        type="email" 
+                        placeholder="Enter email address"
+                        name="user_email"
+                        className='input-form inputNewsletter mt-0 ps-1' 
+                        required
+                        // onChange={(e) => setEmail(e.target.value)}
+                      />
+                       <button type="submit" value="send" className="d-flex btn btn-light mt-2">Subscribe</button>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+            </Modal>
+
+          </div>
+        </section>
+
         <section className="landingpage" style={{ backgroundImage: "url(" + "/carouselPic/landingpage.jpg" + ")",
                                                                   backgroundPosition: 'center',
                                                                   backgroundSize: 'cover',

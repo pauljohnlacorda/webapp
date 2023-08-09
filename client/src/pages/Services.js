@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import { useState } from 'react';
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -17,7 +18,17 @@ const Services = () => {
     fetchServices();
   }, []);
 
+
+  const [currentPage, setcurrentPage] = useState(1)
+  const recordsPerPage = 10;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = services.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(services.length / recordsPerPage)
+  const numbers = [...Array(npage + 1).keys()].slice(1)
+
   return (
+    <div className='container'>
     <table className='table table-sm table-hover'>
       <thead>
         <tr>
@@ -32,7 +43,7 @@ const Services = () => {
         </tr>
       </thead>
       <tbody>
-        {services.map(service => (
+        {records.map(service => (
           <tr key={service._id}>
           
             <td></td>
@@ -45,8 +56,39 @@ const Services = () => {
         ))}
       </tbody>
     </table>
+    <nav>
+          <ul className='pagination'>
+            <li className='page-item'>
+              <a href='#' className='page-link' onClick={prePage}>Prev</a>
+            </li>
+            {
+              numbers.map(service => (
+                <li className={`page-item ${currentPage === service ? 'active' : ''}`} key={service._id}>
+                    <a href="#" className='page-link' onClick={() => changeCpage(service)}>{service}</a>
+                </li>
+              ))
+            }
+            <li className='page-item'>
+                <a href='#' className='page-link' onClick={nextPage}>Next</a>
+            </li>
+          </ul>
+    </nav>
+    </div>
 
   );
+  function prePage(){
+    if(currentPage !== firstIndex){
+      setcurrentPage(currentPage - 1)
+    }
+  }
+  function changeCpage(id){
+    setcurrentPage(id)
+  }
+  function nextPage(){
+    if(currentPage !== lastIndex){
+      setcurrentPage(currentPage + 1)
+    }
+  }
 };
 
 export default Services;

@@ -19,7 +19,7 @@ const Contacts = () => {
              </div>
            
                 <div className="container-fluid d-flex text-center"><h6>Chic Station 1</h6></div>
-                <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-location-dot me-4 ps-2"></i>Padre Gomez Roxas Street, Davao City</h6></div>
+                <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-location-dot me-4 ps-2"></i>Padre Gomez Roxas St., Davao City</h6></div>
                 <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-phone me-4 ps-2 "></i>09550954670</h6></div>
                 
                 <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-phone me-4 ps-2 mb-2"></i>09454430380</h6></div>
@@ -36,7 +36,7 @@ const Contacts = () => {
            </div>
          
               <div className="container-fluid d-flex text-center"><h6>Chic Station 2</h6></div>
-              <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-location-dot me-4 ps-2"></i>Rizal extension cor De Jesus St., Davao City</h6></div>
+              <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-location-dot me-4 ps-2"></i>Rizal corner De Jesus St., Davao City</h6></div>
               <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-phone me-4 ps-2 "></i>09859559334</h6></div>
               
               <div className="container-fluid d-flex p-0 m-0"><h6><i class="fa-solid fa-phone me-4 ps-2 mb-2 "></i>09454430380</h6></div>

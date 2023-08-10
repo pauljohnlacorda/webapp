@@ -1,14 +1,23 @@
-import React, { useState , useRef} from "react";
-// import Carousel from 'react-elastic-carousel';
+import React, { useState , useRef, useEffect} from "react";
 import "./Homepage.css";
 import { Link } from 'react-router-dom';
 import MyCarousel from "../carousel";
 import Modal from '../Modal';
-// import React, { useRef } from 'react';
 import emailjs, { sendForm } from '@emailjs/browser';
+import Swal from 'sweetalert2'
+
 
 const Homepage = () => {
+  
+  const Alert = () =>{
+    Swal.fire("Thank you for subscribing!")
+  }
+
+
   const [isOpen, setIsOpen] = useState(true)
+
+  
+
 
   const form = useRef();
 
@@ -19,13 +28,16 @@ const Homepage = () => {
       .then((result) => {
           console.log(result.text);
           form.current.reset();
+          Alert();
+         
           
       }, (error) => {
           console.log(error.text);
+          
       });
       
   };
-
+  
 
     return (
         <>
@@ -40,25 +52,27 @@ const Homepage = () => {
                   </div> 
                   <div className="flex card-body p-0 m-1 ">
                     <div className="flex p-0 m-0 card-body-newsletter">
-                      <h4 className="text-center">Subscribe to receive update and promos.</h4>
+                      <h4 className="text-center">Subscribe to receive updates and promos.</h4>
                     </div>
                  
                   <div className="p-0 mt-2 text-center">
                     <form className="formNewsletter" ref={form} onSubmit={sendEmail}>  
                     <input 
                         type="email" 
-                        placeholder="Enter email address"
+                        placeholder="e-mail address"
                         name="user_email"
-                        className='input-form inputNewsletter mt-0 ps-1' 
+                        className='input-form inputNewsletter mt-0 p-3' 
                         required
-                        // onChange={(e) => setEmail(e.target.value)}
+                        
+                       
                       />
-                       <button type="submit" value="send" className="d-flex btn btn-light mt-2">Subscribe</button>
+                       <button type="submit" value="send" className="d-flex btn btn-light mt-2"   >Subscribe</button>
                     </form>
                     </div>
                   </div>
                 </div>
             </Modal>
+            
 
           </div>
         </section>
@@ -111,7 +125,7 @@ const Homepage = () => {
               <Link to='/gallery' className="nav-links" >  
                 <div className="card p-0 m-0">
                   <div className="card-header text-center p-0 m-0 nail-art">
-                    <img src="/carouselPic/nail-home.png" alt="" className="image-section img-fluid p-0 m-0 "></img>
+                    <img src="/carouselPic/nail-home.png" alt="" className="image-section img-fluid"></img>
                     <div className="card-hover p-0 m-0"><p className="bg-white fs-5 text-start p-2">Polygel nail extensions or softgel extensions are a nail enhancement that is more flexible and lightweight compared to acrylic but is harder than regular gel.</p></div>
                   </div> 
                   <div className="card-body p-0 m-0">

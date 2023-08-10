@@ -23,12 +23,7 @@
 .fa-x{
     color:black;
 }
-/* .modal{
-    margin-left: auto;
-    margin-left: auto;
-    width: 15em;
-    height: 18em;
-} */
+
 @media only screen and (max-width: 960px) {
     .buttonModal{
         left: 68%;

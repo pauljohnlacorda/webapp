@@ -27,3 +27,6 @@ code {
 p, i{
   color: #bd6513;
 }
+.swal2-confirm{
+  background-color: hotpink !important;
+}

@@ -2,15 +2,21 @@ import { useState } from 'react';
 // import ReactDOM from 'react-dom/client';
 import "./MyForm.css";
 import axios from 'axios';
+import Swal from 'sweetalert2'
+
 
 function MyForm() {
   const [name, setName] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("")
 
+  const Alert = () =>{
+    Swal.fire("Message Sent! Thank you!")
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Message Sent. Thank You!`)
+    // alert(`Message Sent. Thank You!`)
     const data={
       Name:name,
       Email:email,
@@ -22,6 +28,7 @@ function MyForm() {
       setName('');
       setemail('');
       setmessage('');
+      Alert();
     })
   }
 
@@ -40,15 +47,17 @@ function MyForm() {
           placeholder='Enter your Name'
           onChange={(e) => setName(e.target.value)}
           className='input-form'
+          required
         />
         </div>
         <div className='flex ms-5 p-1 '>
         <input 
-          type="text" 
+          type="email" 
           value={email}
           placeholder='E-mail Address'
           onChange={(e) => setemail(e.target.value)}
           className='input-form'
+          required
         />    
 
        </div>
@@ -58,7 +67,8 @@ function MyForm() {
         </textarea>
        </div>
        <div className='flex ms-5 px-1 py-1 mb-2'>
-        <input type="submit" className='text-white-50 bg-secondary ' />
+        {/* <input type="submit" className='text-white-50 bg-mute ' /> */}
+        <button type='submit' className='btn btn-light'>Send</button>
       </div>
     </form>
     </div>

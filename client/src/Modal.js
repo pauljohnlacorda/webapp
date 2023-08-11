@@ -7,9 +7,9 @@ export default function Modal({open, children, onClose}){
 
     return(
         
-        <div className="container-fluid p-0 m-0 mods">
+        <div className=" p-0 m-0 mods text-end">
             
-            <button onClick={onClose} className="btn p-1 buttonModal"><i class="fa-solid fa-x "></i></button>
+            <button onClick={onClose} className="btn btn-light p-1 buttonModal"><i class="fa-solid fa-x "></i></button>
             {children}
            
         </div>

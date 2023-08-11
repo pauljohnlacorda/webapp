@@ -13,18 +13,19 @@
 }
 .buttonModal{
     position: absolute;
-    left: 61%;
-    top: 5%;
+    right: 2%;
+    top: 2%;
     z-index: 1000;
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(255,255,255,.2);
     border: 1px solid rgba(0,0,0,.1);
-    box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+    box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+    /* margin: 0 !important; */
 }
 .fa-x{
     color:black;
 }
 
-@media only screen and (max-width: 960px) {
+/* @media only screen and (max-width: 960px) {
     .buttonModal{
         left: 68%;
     }
@@ -38,4 +39,4 @@
     .buttonModal{
         left: 90%;
     }
-}
+} */
